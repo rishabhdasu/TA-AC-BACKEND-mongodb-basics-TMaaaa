@@ -18,7 +18,9 @@ Write code to:-
 
 - add multiple players in those collections which should have fields like `name`, `age` and `email` and `bid_price`.
 
-- db.Cricket.insertMany([{'name' : 'V Kholi', 'age' : 33, 'email' : 'kohli@gmail.com', 'Bid Price' : '18Cr'}, {'name' : 'R Sharma', 'age' : 34, 'email' : 'rsharma@gmail.com', 'BidPrice' : '15CR'}]);
+- db.Cricket.insertMany(players);
+- db.Football.insertMany(players);
+- db.TT.insertMany(players);
 
 - list all collections in sports database.
 
@@ -33,17 +35,28 @@ Write code to:-
 
   - db.createCollection('Khokho', {capped : true, size : 1024, max : 3});
 
+  - db.Khokho.insertMany(players);
+
 - check whether a collection is capped or not?
 
 - db.Khokho.isCapped();
 
 - drop all documents from `football` collection.
 
-- db.Football.Collections.drop();
+- db.Football.remove({});
 
 - delete cricket collection completely.
+
+- db.Cricket.drop();
+
 - delete sports database.
+
+- db.dropDatabase();
 
 - check which database you are connected to ?
 
+- db
+
 - connect to test database
+
+- use test
