@@ -16,16 +16,12 @@ Write code to:-
 
 - insert multiple document using insertMany command
 
-- db.himalayas.insertMany([
-  ... { name: "Dhauldhar range", height: "4000 mtrs" },
-  ... { name: "Tibetan-Tethys Himalayas", height: "4000 mtrs" },
-  ... { name: "Sivalik Hills", height: "4000 mtrs" },
-  ... { name: "Lower Himalayan Range", height: "4000 mtrs" },
-  ... { name: "Himadri ", height: "4000 mtrs" },
-  ... ]);
+- db.himalayas.(ranges);
 
 - find all documents from mountains
 
 - db.himalayas.find();
 
 - find a single document using name
+
+- db.himalayas.findOne({name : "Mount K2"});
