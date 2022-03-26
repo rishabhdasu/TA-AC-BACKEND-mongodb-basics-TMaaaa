@@ -3,8 +3,16 @@ writeCode
 Write code to execute below expressions.
 
 1. Create a database named `blog`.
+
+- use blog
+
 2. Create a collection called 'articles'.
+
+- db.createCollection('articles');
+
 3. Insert multiple documents(at least 3) into articles. It should have fields
+
+- db.articles.insertMany(data);
 
 - title as string
 - createdAt as date
@@ -33,12 +41,29 @@ Write code to execute below expressions.
 ```
 
 4. Find all the articles using `db.COLLECTION_NAME.find()`
+
+- db.articles.find().
+
 5. Find a document using \_id field.
+
+- db.articles.find({\_id : ObjectId("623ddba1931768ca4149fd95")});
+
 6. 1. Find documents using title
+
+- db.articles.find({title : "Node JS"});
+
 7. 2. Find documents using author's name field.
+
+- db.articles.find({author : {$elemMatch : {name : "Greg Lim"}}});
+
 8. Find document using a specific tag.
 
+- db.articles.find({tags : "css"});
+
 9. Update title of a document using its \_id field.
+
+- db.articles.update({\_id : ObjectId("623ddba1931768ca4149fd95")}, {$push : {tags : "MongoDB"}});
+
 10. Update a author's name using article's title.
 11. rename details field to description from all articles in articles collection.
 12. Add additional tag in a specific document.
