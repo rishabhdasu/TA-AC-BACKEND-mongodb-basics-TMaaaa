@@ -43,12 +43,23 @@ Go to `https://www.json-generator.com/`
 - download it on `Desktop`
 - import it into mongodb `test` database into a collection named `users`
 
+```
+ mongoimport --db test --collection users --file C:\Users\Home\Desktop\altjs\TA-AC-BACKEND-mongodb-basics-TMaaaa\block-BMaaai\generated.json --jsonArray
+```
+
 #### Export data from mongodb server to local system in json format using
 
 `mongoexport`command.
 
 ```
 mongoexport --db state --collection cities --out ~/Desktop/states/city.json --jsonArray
+```
+
+```
+mongoexport --db test --collection users --out /Home/Users/Desktop/exported.json
+
+ mongoexport --db test --collection users --out C:\Users\Home\Desktop\exported.json
+
 ```
 
 ## BLOCK-writeCode
@@ -59,6 +70,9 @@ Export `users` collection from `test` database onto `Desktop` in a file named `e
 
 ```
 mongoimport -d DB_NAME -c COLLECTION_NAME --type csv --file elections.csv(file location) --headerline(including header)
+
+mongoimport --db test --collection students --type csv --headerline --ignoreBlanks --file C:\Users\Home\Downloads\students.csv
+
 ```
 
 ## BLOCK-writeCode
